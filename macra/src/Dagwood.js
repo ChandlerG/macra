@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Dagwood.css';
+import './Cat.css';
 
 class Dagwood extends React.Component{
     render() {
