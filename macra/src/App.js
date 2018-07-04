@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Dagwood from './Dagwood';
-import Sully from './Sully';
+import Dagwood from './Cats/Dagwood';
+import Sully from './Cats/Sully';
 
 class App extends Component {
   render() {
