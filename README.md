@@ -1,6 +1,6 @@
 # macra
 
-Just messing around with create react app, feel free to poke around, these cats are pretty cu`e.
+Just messing around with create react app, feel free to poke around, these cats are pretty cute.
 
 `npm run start` to run locally
 
