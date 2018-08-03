@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CatDisplay from './Cats/CatDisplay';
+import ApiViewTest from './ApiViewTest';
 
 class App extends Component {
   state = {
@@ -21,6 +22,7 @@ class App extends Component {
       <div>
         <CatDisplay cat={this.state[this.state.currentCat]}/>
         <button onClick={this.updateCat}>CLICK ME</button>
+        <ApiViewTest/>
       </div>
     );
   }
