@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CatDisplay from './Cats/CatDisplay';
 import ApiViewTest from './ApiViewTest';
+import './styles/styles.css'
 
 class App extends Component {
   state = {
@@ -15,13 +16,20 @@ class App extends Component {
     currentCat: 'dagwood',
   }
 
-  updateCat = () => this.setState({currentCat: 'sully'})
+  updateCat = () => {
+    if (this.state.currentCat === 'dagwood'){
+      this.setState({currentCat: 'sully'})
+    }
+    else {
+      this.setState({currentCat: 'dagwood'})
+    }
+  }
 
   render() {
     return (
-      <div>
+      <div style={{'text-align':'center'}}>
+        <button className="center-button" onClick={this.updateCat}>CLICK ME</button>
         <CatDisplay cat={this.state[this.state.currentCat]}/>
-        <button onClick={this.updateCat}>CLICK ME</button>
         <ApiViewTest/>
       </div>
     );

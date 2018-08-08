@@ -10,6 +10,8 @@ export const catCall = async () => {
     console.log(inXml);
     let imageTag = inXml.match(re);
     return imageTag;
+
+    //TODO attach source url
  }
 
 // <?xml version="1.0"?>

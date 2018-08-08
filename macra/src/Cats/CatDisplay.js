@@ -7,8 +7,6 @@ class CatDisplay extends React.Component{
         this.props.name;
         return (
             <div>
-                <div> name : {this.props.cat.name}</div>
-                <div> resource : {this.props.cat.resource}</div>
                 <img className="center-fit" src={this.props.cat.resource}/>
             </div>
         )
@@ -16,7 +14,8 @@ class CatDisplay extends React.Component{
     }
 }
 
-
+//<div> name : {this.props.cat.name}</div>
+               //<div> resource : {this.props.cat.resource}</div>
 
 /*
   unidirectional flow
