@@ -7,3 +7,5 @@ Just messing around with create react app, feel free to poke around, these cats 
 code of conduct: be excellent to each other
 
 pull guidelines: check with Dagwood
+
+currently broken due to catapi changes, will fix soon tm
