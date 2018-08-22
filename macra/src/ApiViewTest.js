@@ -15,13 +15,11 @@ export default class ApiViewTest extends React.Component
   }
 
   componentDidMount = async () => {
-    let result = 'hi';
     let imageTag;
     const res = await catCall();
-    const resText = await res.text()
-    const extractedImageArray = extractImg(resText);
-    const extractedImage = extractedImageArray[1];
-    this.setState({imgUrl: extractedImage});
+    const resText = await res.json();
+    console.log(resText);
+    this.setState({imgUrl: resText[0].url});
   }
 }
 
