@@ -1,10 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './Cat.css';
 
 class CatDisplay extends React.Component{
     render() {
-        this.props.name;
         return (
             <div>
                 <img className="center-fit" src={this.props.cat.resource}/>
