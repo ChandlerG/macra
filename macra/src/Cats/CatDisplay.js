@@ -10,7 +10,6 @@ class CatDisplay extends React.Component{
                 <img className="center-fit" src={this.props.cat.resource}/>
             </div>
         )
-        // return (<img className="center-fit" src="dagwood.jpg"/>)
     }
 }
 
