@@ -3,36 +3,45 @@ import CatDisplay from './Cats/CatDisplay';
 import ApiViewTest from './Components/ApiViewTest';
 import './styles/styles.css'
 
-class App extends Component {
-  state = {
-    dagwood: {
-      name: 'Dagwood',
+const DAGWOOD = 'Dagwood'
+const SULLY = 'Sully'
+
+const dagwoodObject = {
+      name: DAGWOOD,
       resource: 'dagwood.jpg'
-    },
-    sully: {
-      name: 'Sully',
+};
+
+const sullyObject = {    
+      name: SULLY,
       resource: 'sully.jpg'
-    },
-    currentCat: {
-      name: 'Dagwood',
-      resource: 'dagwood.jpg'
-    },
+}
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentCat: DAGWOOD,
+      currentCatObject: dagwoodObject
+    }
   }
 
   updateCat = () => {
-    if (this.state.currentCat.name === this.state.dagwood.name){
-      this.setState({currentCat: this.state.sully})
+    if (this.state.currentCat === DAGWOOD)
+    {
+      this.setState({currentCat: SULLY, currentCatObject: sullyObject})
     }
-    else {
-      this.setState({currentCat: this.state.dagwood})
+    else
+    {
+      this.setState({currentCat: DAGWOOD, currentCatObject: dagwoodObject})
     }
+
   }
 
   render() {
     return (
       <div style={{'textAlign':'center'}}>
         <button className="center-button" onClick={this.updateCat}>CLICK ME</button>
-        <CatDisplay cat={this.state.currentCat}/>
+        <CatDisplay cat={this.state.currentCatObject}/>
         <ApiViewTest/>
       </div>
     );
