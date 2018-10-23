@@ -17,24 +17,20 @@ const sullyObject = {
 }
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentCat: DAGWOOD,
-      currentCatObject: dagwoodObject
+    constructor(props) {
+      super(props);
+      this.state = {
+        currentCat: DAGWOOD,
+        currentCatObject: dagwoodObject
+      }
     }
-  }
 
   updateCat = () => {
-    if (this.state.currentCat === DAGWOOD)
-    {
+    if (this.state.currentCat === DAGWOOD) {
       this.setState({currentCat: SULLY, currentCatObject: sullyObject})
-    }
-    else
-    {
+    } else {
       this.setState({currentCat: DAGWOOD, currentCatObject: dagwoodObject})
     }
-
   }
 
   render() {

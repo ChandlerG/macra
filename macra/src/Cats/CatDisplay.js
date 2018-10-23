@@ -2,26 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Cat.css';
 
-class CatDisplay extends React.Component{
-    render() {
-        this.props.name;
-        return (
-            <div>
-                <img className="center-fit" src={this.props.cat.resource}/>
-            </div>
-        )
-    }
-}
-
-//<div> name : {this.props.cat.name}</div>
-               //<div> resource : {this.props.cat.resource}</div>
-
-/*
-  unidirectional flow
-  react component only updates to props
-  props == properties of your component
-  when your prop updates, your component updates
-*/
-
+const CatDisplay = ({cat}) => <div>
+    <img className="center-fit" src={cat.resource}/>
+  </div>
 
 export default CatDisplay;
