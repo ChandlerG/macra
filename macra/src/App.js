@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CatDisplay from './Cats/CatDisplay';
-import ApiViewTest from './Components/ApiViewTest';
+import CatDisplay from './Components/CatDisplay';
+import CatApiDisplayer from './Components/CatApiDisplayer';
 import './styles/styles.css'
 
 const DAGWOOD = 'Dagwood'
@@ -38,7 +38,7 @@ class App extends Component {
       <div style={{'textAlign':'center'}}>
         <button className="center-button" onClick={this.updateCat}>CLICK ME</button>
         <CatDisplay cat={this.state.currentCatObject}/>
-        <ApiViewTest/>
+        <CatApiDisplayer/>
       </div>
     );
   }

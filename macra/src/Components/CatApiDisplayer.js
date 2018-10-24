@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import CatDisplay from '../Cats/CatDisplay';
-import {catCall} from '../lib/CatApiCall.js';
+import CatDisplay from '../Components/CatDisplay';
+import {catCall} from '../lib/CatApiDisplayerLib.js';
 
 const API_CAT = 'Api Cat';
 
-export default class ApiViewTest extends React.Component {
+export default class CatApiDisplayer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,12 +17,11 @@ export default class ApiViewTest extends React.Component {
   }
 
   componentDidMount = async () => {
-    const res = await catCall();
-    const resText = await res.json();
+    const catImgUrl = await catCall();
     this.setState({
       currentCatObject: { 
         name: API_CAT,
-        resource: resText[0].url
+        resource: catImgUrl
       }
     });
   }
